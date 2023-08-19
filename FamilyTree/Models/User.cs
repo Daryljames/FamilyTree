@@ -12,7 +12,7 @@ public class User
 	public string EmailAddress { get; set; }
 	public string Password { get; set; }
 	public string Role { get; set; }
-	public int MobileNumber { get; set; }
+	public string MobileNumber { get; set; }
 	public DateTime Birthday { get; set; }
 	public string CivilStatus { get; set; }
 	public string CreatedBy { get; set; }
@@ -21,4 +21,6 @@ public class User
 	public DateTime UpdatedOn { get; set; }
 	public bool IsActive { get; set; }
 	public List<SocialMedia> SocialMedia { get; set; }
+	public Address Address { get; set; }
+	public List<Family> Families { get; set; }
 }

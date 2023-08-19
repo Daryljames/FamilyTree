@@ -12,4 +12,6 @@ public class DataContext : DbContext
 
 	public DbSet<User> Users { get; set; }
 	public DbSet<SocialMedia> SocialMedias { get; set; }
+	public DbSet<Address> Addresses { get; set; }
+	public DbSet<Family> Families { get; set; }
 }
