@@ -1,5 +1,7 @@
 global using FamilyTree.Data;
 global using Microsoft.EntityFrameworkCore;
+using FamilyTree.Interfaces;
+using FamilyTree.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,7 +18,9 @@ builder.Services.AddDbContext<DataContext>(options =>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var app = builder.Build();
+builder.Services.AddScoped<IUsersService, UsersMSSQLService>();
+
+WebApplication app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
